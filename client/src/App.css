@@ -1,0 +1,139 @@
+#root {
+  text-align: center;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+.header {
+  background-color: #2f3c7e;
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand {
+  font-size: 24px;
+  margin-left: 50px;
+}
+.btn {
+  background-color: #fff;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 50px;
+  font-weight: bold;
+  font-size: 17px;
+}
+.btn:hover {
+  transform: scale(1.1);
+  transition: all 1s;
+}
+.dataSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+}
+.data {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.email {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Loader Section */
+
+.loaderSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 300px;
+}
+
+.loader {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.loader .circle {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  top: 8px;
+  left: 8px;
+  border-radius: 50%;
+  border: 6px solid #007bff;
+  border-color: #007bff transparent #007bff transparent;
+  animation: loaderAnimation 1.2s linear infinite;
+}
+
+.loader .line-1 {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 6px solid #007bff;
+  border-color: #007bff transparent #007bff transparent;
+  animation: loaderAnimation 1.2s linear infinite reverse;
+}
+
+.loader .line-2 {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 6px solid #007bff;
+  border-color: #007bff transparent #007bff transparent;
+  animation: loaderAnimation 1.2s linear infinite;
+}
+
+@keyframes loaderAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
